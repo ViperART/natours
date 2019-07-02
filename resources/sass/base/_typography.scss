@@ -18,6 +18,7 @@ body {
         letter-spacing: 3.5rem;
         display: block;
         animation: moveInLeft 1s ease-out .2s;
+        animation-fill-mode: backwards;
     }
     
     &--sub {
@@ -27,6 +28,7 @@ body {
         letter-spacing: 1.4rem;
         padding-left: .2rem;
         animation: moveInRight 1s ease-out .2s;
+        animation-fill-mode: backwards;
     }
 }
 

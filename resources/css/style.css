@@ -42,18 +42,6 @@ html {
     opacity: 1;
     transform: translate(0); } }
 
-@keyframes jump {
-  0% {
-    transform: none; }
-  25% {
-    transform: translateY(-1rem) rotateZ(2deg) scale(1.1); }
-  50% {
-    transform: scale(1.1); }
-  75% {
-    transform: translateY(-1rem) rotateZ(-2deg) scale(1.1); }
-  100% {
-    transform: none; } }
-
 body {
   font-family: 'Lato', sans-serif;
   font-weight: 400;
@@ -71,14 +59,16 @@ body {
     font-size: 9rem;
     letter-spacing: 3.5rem;
     display: block;
-    animation: moveInLeft 1s ease-out .2s; }
+    animation: moveInLeft 1s ease-out .2s;
+    animation-fill-mode: backwards; }
   .heading-primary--sub {
     display: block;
     font-size: 3rem;
     font-weight: 700;
     letter-spacing: 1.4rem;
     padding-left: .2rem;
-    animation: moveInRight 1s ease-out .2s; }
+    animation: moveInRight 1s ease-out .2s;
+    animation-fill-mode: backwards; }
 
 .heading-secondary {
   font-size: 4.2rem;
