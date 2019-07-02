@@ -120,8 +120,14 @@ body {
 .u-margin-bottom-big {
   margin-bottom: 8rem; }
 
+.u-margin-bottom-big-2 {
+  margin-bottom: 7rem; }
+
 .u-margin-top-huge {
   margin-top: 14rem; }
+
+.u-padding-top-big {
+  padding-top: 7rem; }
 
 .section-about {
   background-color: #f7f7f7;
@@ -140,12 +146,12 @@ body {
 
 .section-tours {
   background-color: #f7f7f7;
-  padding: 28rem 0 20rem 0;
+  padding: 30rem 0 9rem 0;
   margin-top: -12rem; }
 
 .section-stories {
-  background-color: #f7f7f7;
-  padding: 15rem 0; }
+  padding: 0 0 9.5rem 0;
+  position: relative; }
 
 .btn:link, .btn:visited {
   text-transform: uppercase;
@@ -355,6 +361,71 @@ body {
   .card__price-value {
     font-size: 9rem;
     font-weight: 200; }
+
+.story {
+  width: 75%;
+  margin: 0 auto;
+  box-shadow: 0 3rem 6rem rgba(0, 0, 0, 0.1);
+  background-color: rgba(255, 255, 255, 0.6);
+  border-radius: .4rem;
+  padding: 6rem;
+  padding-left: 10rem;
+  font-size: 2rem;
+  transform: skewX(-12deg);
+  backface-visibility: hidden; }
+  .story--skew-cancel {
+    transform: skewX(12deg); }
+  .story:not(:last-child) {
+    margin-bottom: 7rem; }
+  .story__shape {
+    width: 16.3rem;
+    height: 16.3rem;
+    float: left;
+    -webkit-shape-outside: circle(50% at 50% 50%);
+    shape-outside: circle(50% at 50% 50%);
+    -webkit-clip-path: circle(50% at 50% 50%);
+    clip-path: circle(50% at 50% 50%);
+    transform: translateX(-3rem) translateY(0.9rem);
+    position: relative;
+    backface-visibility: hidden; }
+  .story__img {
+    height: 100%;
+    transform: translateX(-4rem) scale(1.4);
+    transition: all .5s;
+    backface-visibility: hidden; }
+  .story__caption {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, 20%);
+    color: #fff;
+    text-transform: uppercase;
+    font-size: 1.9rem;
+    text-align: center;
+    opacity: 0;
+    transition: all .5s;
+    backface-visibility: hidden; }
+  .story:hover .story__caption {
+    opacity: 1;
+    transform: translate(-50%, -50%);
+    backface-visibility: hidden; }
+  .story:hover .story__img {
+    transform: translateX(-4rem) scale(1);
+    filter: blur(0.3rem) brightness(80%);
+    backface-visibility: hidden; }
+
+.bg-video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  opacity: .15; }
+  .bg-video__content {
+    height: 100%;
+    width: 100%;
+    object-fit: cover; }
 
 .row {
   max-width: 135rem;
