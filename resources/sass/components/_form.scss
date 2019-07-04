@@ -4,6 +4,11 @@
 
         & .btn {
             margin-left: 14rem;
+
+
+            @include respond(tab-port-small) {
+                margin: 0;
+            }
         }
     }
 
@@ -24,6 +29,11 @@
         display: block;
         transition: all .3s;
         height: 5rem;
+
+        @include respond(tab-port-small) {
+            margin: 0;
+            width: 100%;
+        }
 
         &:focus {
             outline: none;
@@ -48,7 +58,7 @@
         transition: all .3s;
     }
 
-    &__input:placeholder-shown + &__label {
+    &__input:placeholder-shown+&__label {
         opacity: 0;
         visibility: hidden;
         transform: translateY(-4rem);
@@ -59,6 +69,11 @@
         width: 49%;
         display: inline-block;
         margin-top: 2rem;
+
+        @include respond(phone) {
+            display: block;
+            width: 100%;
+        }
     }
 
     &__radio-input {
@@ -97,9 +112,9 @@
         }
     }
 
-    &__radio-input:checked ~ &__radio-label &__radio-button::after {
+    &__radio-input:checked~&__radio-label &__radio-button::after {
         opacity: 1;
     }
 
-   
+
 }

@@ -12,13 +12,18 @@ body {
     font-weight: 400;
     backface-visibility: hidden;
     margin-bottom: 6rem;
-
+    
     &--main {
         font-size: 9rem;
         letter-spacing: 3.5rem;
         display: block;
         animation: moveInLeft 1s ease-out .2s;
         animation-fill-mode: backwards;
+
+        @include respond(phone) {
+            letter-spacing: 1rem;
+            font-size: 6rem;
+        }
     }
     
     &--sub {
@@ -29,6 +34,12 @@ body {
         padding-left: .2rem;
         animation: moveInRight 1s ease-out .2s;
         animation-fill-mode: backwards;
+
+        @include respond(phone) {
+            letter-spacing: .5rem;
+            font-size: 2rem;
+            font-weight: 300;
+        }
     }
 }
 
@@ -44,6 +55,14 @@ body {
     letter-spacing: .2rem;
     transition: all .2s;
     backface-visibility: hidden;
+
+    @include respond(tab-port-small) {
+        font-size: 3.8rem;
+    }
+
+    @include respond(phone) {
+        font-size: 3.2rem;
+    }
 
     &:hover {
         transition: all .2s;

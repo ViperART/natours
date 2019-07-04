@@ -74,12 +74,21 @@
                 </div>
                 <div class="col-1-of-2">
                     <div class="composition">
-                        <img src="resources/img/nat-1-large.jpg" alt="Photo 1"
-                            class="composition__photo composition__photo--1">
-                        <img src="resources/img/nat-2-large.jpg" alt="Photo 2"
-                            class="composition__photo composition__photo--2">
-                        <img src="resources/img/nat-3-large.jpg" alt="Photo 3"
-                            class="composition__photo composition__photo--3">
+
+                        <img srcset="resources/img/nat-1.jpg 300w, resources/img/nat-1-large.jpg 1000w" alt="Photo 1"
+                            sizes="(max-width: 56.25em) 20wv, (max-width: 37.5em) 30wv, 300px"
+                            class="composition__photo composition__photo--1"
+                            src="resources/img/nat-1-large.jpg">
+
+                        <img srcset="resources/img/nat-2.jpg 300w, resources/img/nat-2-large.jpg 1000w" alt="Photo 2"
+                            sizes="(max-width: 56.25em) 20wv, (max-width: 37.5em) 30wv, 300px"
+                            class="composition__photo composition__photo--2"
+                            src="resources/img/nat-2-large.jpg">
+
+                        <img srcset="resources/img/nat-3.jpg 300w, resources/img/nat-3-large.jpg 1000w" alt="Photo 3"
+                            sizes="(max-width: 56.25em) 20wv, (max-width: 37.5em) 30wv, 300px"
+                            class="composition__photo composition__photo--3"
+                            src="resources/img/nat-3-large.jpg">
                     </div>
                 </div>
             </div>
@@ -353,7 +362,11 @@
 
     <footer class="footer">
         <div class="footer__logo-box">
-            <img src="resources/img/logo-green-2x.png" class="footer__logo" alt="">
+            <picture class="footer__logo">
+                <source srcset="resources/img/logo-green-small-1x.png 1x, resources/img/logo-green-small-1x.png 2x" media="(max-width: 37.5em)">
+                <img srcset="resources/img/logo-green-1x.png 1x, resources/img/logo-green-2x.png 2x" alt=""
+                    src="resources/img/logo-green-2x.png">
+            </picture>
         </div>
         <div class="row">
             <div class="col-1-of-2">
@@ -372,7 +385,7 @@
                     Coded by <a target="_blank" href="https://github.com/ViperART/" class="footer__link">ViperART</a>,
                     original design by <a target="_blank" href="https://twitter.com/jonasschmedtman"
                         class="footer__link">Jonas Schmedtmann</a>.<br>Copyright &copy; by Jonas Schmedtman. You are
-                    allowed to use this this webpage for both personal and commercial use, but not to claim it as your
+                    allowed to use this webpage for both personal and commercial use, but not to claim it as your
                     own design.
                 </p>
             </div>
@@ -388,9 +401,17 @@
             <div class="popup__right">
                 <a href="#section-tours" class="popup__close">&times;</a>
                 <h2 class="heading-secondary u-margin-bottom-small">Start booking now</h2>
-                <h3 class="heading-tertiary u-margin-bottom-small">Important &ndash; Please read these terms berfore booking</h3>
+                <h3 class="heading-tertiary u-margin-bottom-small">Important &ndash; Please read these terms berfore
+                    booking</h3>
                 <p class="popup__text">
-                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Asperiores omnis amet quos, obcaecati veritatis aspernatur. Odit quo sed ipsam. Non itaque voluptas fugit reprehenderit nihil tenetur similique eius ex molestiae. Lorem ipsum dolor, sit amet consectetur adipisicing elit. Fugit nisi amet voluptas rerum consequatur suscipit nemo, a ullam, deserunt architecto temporibus eveniet praesentium dolorum provident corporis dignissimos? Numquam, quam nihil! Lorem ipsum dolor sit, amet consectetur adipisicing elit. Tempore ut laborum dicta velit aliquam repellendus possimus quas, id animi sit provident voluptatum? Illum, velit. Debitis distinctio inventore soluta alias cupiditate. Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Asperiores omnis amet quos, obcaecati
+                    veritatis aspernatur. Odit quo sed ipsam. Non itaque voluptas fugit reprehenderit nihil tenetur
+                    similique eius ex molestiae. Lorem ipsum dolor, sit amet consectetur adipisicing elit. Fugit nisi
+                    amet voluptas rerum consequatur suscipit nemo, a ullam, deserunt architecto temporibus eveniet
+                    praesentium dolorum provident corporis dignissimos? Numquam, quam nihil! Lorem ipsum dolor sit, amet
+                    consectetur adipisicing elit. Tempore ut laborum dicta velit aliquam repellendus possimus quas, id
+                    animi sit provident voluptatum? Illum, velit. Debitis distinctio inventore soluta alias cupiditate.
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit.
                 </p>
                 <a href="#" class="btn btn--green">Book now</a>
             </div>

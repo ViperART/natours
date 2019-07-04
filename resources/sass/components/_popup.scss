@@ -29,6 +29,10 @@
         width: 33.333333%;
         display: table-cell;
         vertical-align: middle;
+
+        @include respond(tab-port-small) {
+            display: none;
+        }
     }
 
     &__right {
@@ -36,6 +40,10 @@
         width: 66.6666667%;
         display: table-cell;
         vertical-align: middle;
+
+        @include respond(tab-port-small) {
+            width: 100%;
+        }
     }
 
     &__img {
@@ -55,6 +63,12 @@
         -moz-hyphens: auto;
         -webkit-hyphens: auto;
         hyphens: auto;
+
+        @include respond(phone) {
+            column-count: auto;
+            column-gap: 0;
+            column-rule: none;
+        }
     }
 
     &:target {
