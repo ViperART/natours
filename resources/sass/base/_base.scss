@@ -13,7 +13,6 @@ html {
         font-size: 56.25%;
     }
 
-
     @include respond(tab-land-medium) {
         font-size: 50%;
     }
@@ -25,4 +24,9 @@ html {
     @include respond(tab-port-big) {
         font-size: 37.5%;
     }
+}
+
+::selection {
+    background-color: $color-primary;
+    color: $color-white;
 }

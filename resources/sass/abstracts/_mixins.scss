@@ -34,27 +34,27 @@ ORDER: Base + typography > general layout + grid > page layout > components
 */
 @mixin respond($breakpoint) {
     @if $breakpoint == phone {
-        @media (max-width: 37.5em) { @content }; // 600px
+        @media only screen and (max-width: 37.5em) { @content }; // 600px
     }
 
     @if $breakpoint == tab-port-small {
-        @media (max-width: 56.25em) { @content }; // 900px
+        @media only screen and (max-width: 56.25em) { @content }; // 900px
     }
 
     @if $breakpoint == tab-port-big {
-        @media (max-width: 63.75em) { @content }; // 1020px
+        @media only screen and (max-width: 63.75em) { @content }; // 1020px
     }
     
     @if $breakpoint == tab-land-small {
-        @media (max-width: 72.5em) { @content }; // 1160px
+        @media only screen and (max-width: 72.5em) { @content }; // 1160px
     }
 
     @if $breakpoint == tab-land-medium {
-        @media (max-width: 81.875em) { @content }; // 1310px
+        @media only screen and (max-width: 81.875em) { @content }; // 1310px
     }
 
     @if $breakpoint == tab-land-big {
-        @media (max-width: 90.625em) { @content }; // 1450px
+        @media only screen and (max-width: 90.625em) { @content }; // 1450px
     }
 
 }
